@@ -1020,7 +1020,7 @@ static int imagem_fill_polygon(lua_State *L) {
   Image im = check_Image(L, 1);
   Polygon po = check_Polygon(L, 2);
   if (lua_gettop(L)>=3) { /* given a colour */
-    Imlib_Color *c = (Imlib_Color*)luaL_checkudata(L, 4, "imlib2.color");
+    Imlib_Color *c = (Imlib_Color*)luaL_checkudata(L, 3, "imlib2.color");
     set_color(c);
   }
   imlib_context_set_image(im);
